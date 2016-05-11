@@ -1,0 +1,61 @@
+.slideshow {
+	position: relative;
+	width: 900px;
+	height: 560px;
+}
+
+.button {
+	height: 40px;
+	width: 40px;
+	border-radius: 20px;
+	border: 1px solid #000000;
+	text-align: center;
+	position: absolute;
+	top: 50%;
+	margin-top: -280px; 
+	z-index: 10;
+	cursor: pointer;
+}
+
+.button.prev {
+	left: 10%;
+}
+
+.button.next {
+	right: 10%;
+}
+
+.slides {
+	height: 100%;
+	width: 100%;
+}
+
+.slide {
+	border: 5px solid #000000;
+	height: 100%;
+	width: 100%;
+	text-align: center;
+	display: none;
+}
+
+.slide:first-child {
+	display: block;
+}
+
+.slide.prev-animation {
+	animation: prev-animation 3s linear;
+}
+
+@-webkit-keyframes prev-animation {
+    0%   {left:10%;}
+    50% {left:-150%;}
+}
+
+.slide.next-animation {
+	animation: next-animation 3s linear;
+}
+
+@-webkit-keyframes next-animation {
+    0%   {right:10%;}
+    50% {right:-150%;}
+}

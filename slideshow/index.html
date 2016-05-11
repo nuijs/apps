@@ -2,18 +2,35 @@
 <html>
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-		<style>
-			body { width:960px; margin: 10px auto; font:normal 14px/20px 'Georgia', serif; }
-			.center { text-align: center; }
-		</style>
+		<link rel="stylesheet" type="text/css" href="styles/slide.css">
+		<script src="../common/scripts/leap.js"></script>
+		<script src="../common/scripts/jquery-1.11.0.min.js"></script>
+		<script src='scripts/slide.js'></script>
 		<title>slideshow demo</title>
 	</head>
 	<body>
-		<p class='center'>simple demo of slideshow with leap</p>
-		<div id='container'></div>
-		<div id='canvas'></div>
-		<script src="../common/scripts/leap.js"></script>
-		<script src='../common/scripts/d3.v3.min.js'></script>
-		<script src='scripts/slide.js'></script>
+		<div class = 'slideshow theme-default'>
+			<div class = 'button prev' onClick = 'slide.prevPage()'></div>
+			
+			<div class = 'slides'>
+				<div class = 'slide' id = 'slide1'>
+					Slide 1
+				</div>
+				<div class = 'slide' id = 'slide2'>
+					Slide 2
+				</div>
+				<div class = 'slide' id = 'slide3'>
+					Slide 3
+				</div>
+				<div class = 'slide' id = 'slide4'>
+					Slide 4
+				</div>
+				<div class = 'slide' id = 'slide5'>
+					Slide 5
+				</div>
+			</div>
+			
+			<div class = 'button next' onClick = 'slide.nextPage()'></div>
+		</div>
 	</body>
 </html>
