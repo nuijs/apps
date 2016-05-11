@@ -19,4 +19,11 @@ var controllerOptions = { port: 3000, enableGestures: true };
 ```
 - Make sure to run websocket server on port 3000. Steps to run the simulator are explained [here](https://github.com/nuijs/simulator)
 
+Second app in this series is - 
+# SLIDE
+
+Imagine this: You start a presentation, control your slides merely through gestures. This is what SLIDE meant to do.
+
+Steps for running, same as above.
+
 
