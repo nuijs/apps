@@ -1,3 +1,16 @@
+var controllerOptions = { port: 3000 };
+
+function setupWebSocket() {
+	var ws = new WebSocket("ws://localhost:3000/");
+	ws.onopen = function() {
+		console.log("camera connected");
+	}
+	return ws;
+}
+var ws = setupWebSocket();
+//comment out the above lines, if using this app with a leap motion controller
+//when not using the leap motion controller, this application acts both as a client and server
+
 var slide = function() {
 	var currentPageNumber = 0, maxPageNumber = 4;
 
@@ -36,3 +49,9 @@ var slide = function() {
 		}
 	}
 }();
+
+Leap.loop(controllerOptions, function(frame) {
+    var hand = frame.hands[0] && frame.hands[0].type; //right or left hand 
+    if(hand == 'right') slide.nextPage();
+    else if(hand == 'left') slide.prevPage();
+});

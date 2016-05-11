@@ -392,7 +392,7 @@ BrowserConnection.prototype.setupSocket = function() {
   socket.onopen = function() { connection.handleOpen(); };
   socket.onclose = function(data) { connection.handleClose(data['code'], data['reason']); };
   socket.onmessage = function(message) { 
-    console.log('message from socket. line no. 395 ', message.data); //Princiya 
+    //console.log('message from socket. line no. 395 ', message.data); //Princiya 
     connection.handleData(message.data) 
   };
   socket.onerror = function(error) {
