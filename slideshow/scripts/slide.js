@@ -12,7 +12,7 @@ var ws = setupWebSocket();
 //when not using the leap motion controller, this application acts both as a client and server
 
 var slide = function() {
-	var currentPageNumber = 1, maxPageNumber = 4;
+	var currentPageNumber = 1, maxPageNumber = 5;
 
 	var hasMorePages = function(direction) {
 		return direction == 'prev' ? (currentPageNumber > 1) : (currentPageNumber < maxPageNumber);
@@ -33,10 +33,10 @@ var slide = function() {
 		prevPage: function() {
 			if(hasMorePages('prev')) {
 		 		$('.slide').css('display', 'none');
-		 		$('#slide'+currentPageNumber).removeClass('prev-animation');
-		 		$('#slide'+currentPageNumber).removeClass('next-animation');
+		 		//$('#slide'+currentPageNumber).removeClass('prev-animation');
+		 		//$('#slide'+currentPageNumber).removeClass('next-animation');
 		 		updatePageNumber('prev');
-		 		$('#slide'+currentPageNumber).addClass('prev-animation');
+		 		//$('#slide'+currentPageNumber).addClass('prev-animation');
 		 		$('#slide'+currentPageNumber).css('display', 'block');
 		 	} else console.log('first page');
 		},
@@ -44,10 +44,10 @@ var slide = function() {
 		nextPage: function() {
 			if(hasMorePages('next')) {
 		 		$('.slide').css('display', 'none');
-		 		$('#slide'+currentPageNumber).removeClass('prev-animation');
-		 		$('#slide'+currentPageNumber).removeClass('next-animation');
+		 		//$('#slide'+currentPageNumber).removeClass('prev-animation');
+		 		//$('#slide'+currentPageNumber).removeClass('next-animation');
 		 		updatePageNumber('next');
-		 		$('#slide'+currentPageNumber).addClass('next-animation');
+		 		//$('#slide'+currentPageNumber).addClass('next-animation');
 		 		$('#slide'+currentPageNumber).css('display', 'block');
 		 	} else console.log('last page');
 		}
