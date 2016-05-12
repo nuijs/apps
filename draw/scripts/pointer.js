@@ -1,5 +1,5 @@
 // Setup Leap loop with frame callback function
-var controllerOptions = { /*port: 3000,*/ enableGestures: true };
+var controllerOptions = { port: 3000, enableGestures: true };
 
 var width = 960,
     height = 500;
@@ -30,6 +30,7 @@ function drawIndexFinger() {
         ctx.strokeStyle = color('#123456');
         ctx.moveTo(prevPosition.tipPosition[0], +prevPosition.tipPosition[1]);
         ctx.lineTo(finger.tipPosition[0], +finger.tipPosition[1]);
+        ctx.lineWidth = 5;
         ctx.stroke();
         ctx.beginPath();
     }
