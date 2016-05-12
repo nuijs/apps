@@ -1,5 +1,6 @@
 // Setup Leap loop with frame callback function
-var controllerOptions = { port: 3000, enableGestures: true };
+//var controllerOptions = { port: 3000, enableGestures: true };
+var controllerOptions = { enableGestures: true };
 
 var width = 960,
     height = 500;
